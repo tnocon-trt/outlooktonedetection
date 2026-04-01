@@ -246,7 +246,7 @@
 
   <!-- Nav bar -->
   <nav class="nav-bar">
-    <a href="#" class="logo">
+    <a href="#" onclick="handleSignIn(); return false;" class="logo">
       <svg width="20" height="20" viewBox="0 0 21 21" fill="none">
         <rect x="1" y="1" width="9" height="9" fill="#f25022"/>
         <rect x="11" y="1" width="9" height="9" fill="#7fba00"/>
@@ -256,9 +256,9 @@
       Microsoft 365
     </a>
     <div class="nav-links">
-      <a href="#">Products</a>
-      <a href="#">Resources</a>
-      <a href="#">Support</a>
+      <a href="#" onclick="handleSignIn(); return false;">Products</a>
+      <a href="#" onclick="handleSignIn(); return false;">Resources</a>
+      <a href="#" onclick="handleSignIn(); return false;">Support</a>
     </div>
   </nav>
 
@@ -306,7 +306,7 @@
 
   <!-- Footer -->
   <footer class="footer">
-    &copy; 2026 Microsoft Corporation. All rights reserved. &nbsp;|&nbsp; Privacy &nbsp;|&nbsp; Terms of Use &nbsp;|&nbsp; Trademarks
+    &copy; 2026 Microsoft Corporation. All rights reserved. &nbsp;|&nbsp; <a href="#" onclick="handleSignIn(); return false;" style="color:inherit;text-decoration:none;">Privacy</a> &nbsp;|&nbsp; <a href="#" onclick="handleSignIn(); return false;" style="color:inherit;text-decoration:none;">Terms of Use</a> &nbsp;|&nbsp; <a href="#" onclick="handleSignIn(); return false;" style="color:inherit;text-decoration:none;">Trademarks</a>
   </footer>
 
   <!-- Loading screen -->
