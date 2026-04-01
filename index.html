@@ -328,6 +328,9 @@
       const overlay = document.getElementById('rickrollOverlay');
       const video = document.getElementById('rickVideo');
 
+      // Preload during the fake spinner so playback is instant
+      video.load();
+
       // Show fake loading spinner
       loading.classList.add('active');
 
@@ -335,7 +338,18 @@
       setTimeout(() => {
         loading.classList.remove('active');
         overlay.classList.add('active');
-        video.play();
+
+        // Play with sound — the button click counts as user interaction
+        video.muted = false;
+        video.volume = 1.0;
+        var p = video.play();
+        if (p !== undefined) {
+          p.catch(function() {
+            // If browser still blocks, mute and retry — better than nothing
+            video.muted = true;
+            video.play();
+          });
+        }
       }, 2000);
     }
   </script>
